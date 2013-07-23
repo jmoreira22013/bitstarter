@@ -4,7 +4,7 @@ app.use(express.logger());
 
 app.get('/', function(request, response) {
   var fs = require('fs');
-  var homepage = fs.readFilesync("index.html");
+  var homepage = fs.readFileSync("index.html");
   response.send(homepage.toString('utf8'));
 });
 
